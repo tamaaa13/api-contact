@@ -1,0 +1,161 @@
+// USER
+// REGISTER
+POST  http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "tegar",
+  "name" : "Tegar Aditya Pratama",
+  "password" : "rahasia"
+}
+
+###
+
+// LOGIN
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "tegar",
+  "password" : "hahaha"
+}
+
+###
+
+// GET
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 2b443357-21b9-40f8-baf7-b8f17416228b
+
+###
+
+// UPDATE
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: a8fb292d-9e8d-43c2-bf52-b45051f36fdb
+
+{
+  "password" : "hahaha"
+}
+
+###
+
+// LOGOUT
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: dfc64848-0b57-4e2f-ac5f-9e30916eea45
+
+###
+
+// CONTACT
+// CREATE
+POST  http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: ac3d1608-00f7-4466-b390-5bfc53f4f739
+
+{
+  "first_name" : "dodo",
+  "last_name" : "didi",
+  "email" : "lalala@asd.com",
+  "phone" : "90122109"
+}
+
+###
+
+// GET
+GET http://localhost:3000/api/contacts/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 59a3b5fe-e078-45bd-87be-6ba90cb2c011
+
+###
+
+// GET ALL
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 2b443357-21b9-40f8-baf7-b8f17416228b
+
+###
+
+// UPDATE
+PUT http://localhost:3000/api/contacts/3
+Content-Type: application/json
+Accept: application/json
+Authorization: ac3d1608-00f7-4466-b390-5bfc53f4f739
+
+{
+  "first_name" : "dodo",
+  "last_name" : "dede",
+  "email" : "lalala@asd.com",
+  "phone" : "90122109"
+}
+
+###
+
+// REMOVE
+DELETE http://localhost:3000/api/contacts/3
+Content-Type: application/json
+Accept: application/json
+Authorization: ac3d1608-00f7-4466-b390-5bfc53f4f739
+
+###
+
+// ADDRESS
+// CREATE
+POST http://localhost:3000/api/contacts/1/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 2b443357-21b9-40f8-baf7-b8f17416228b
+
+{
+  "country" : "indonesia",
+  "postal_code" : "12345"
+}
+
+###
+
+// GET
+GET http://localhost:3000/api/contacts/1/addresses/11
+Content-Type: application/json
+Accept: application/json
+Authorization: 2b443357-21b9-40f8-baf7-b8f17416228b
+
+###
+
+// GET ALL
+GET http://localhost:3000/api/contacts/1/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 2b443357-21b9-40f8-baf7-b8f17416228b
+
+### 
+
+// UPDATE
+PUT http://localhost:3000/api/contacts/1/addresses/12
+Content-Type: application/json
+Accept: application/json
+Authorization: 2b443357-21b9-40f8-baf7-b8f17416228b
+
+{
+  "street" : "Jalan",
+  "city" : "Kota",
+  "provience" : "Provinsi",
+  "country" : "Indonesia",
+  "postal_code" : "12345"
+}
+
+###
+
+// REMOVE
+DELETE  http://localhost:3000/api/contacts/1/addresses/12
+Content-Type: application/json
+Accept: application/json
+Authorization: 2b443357-21b9-40f8-baf7-b8f17416228b
+
